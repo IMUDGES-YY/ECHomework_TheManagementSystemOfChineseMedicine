@@ -77,26 +77,21 @@
                 <%Doctor doctor = (Doctor) request.getAttribute("doctor");%>
                 <%if(doctor.getPosition().equals("0")){%>
                 <li class="active-link">
-                        <%} else {%>
                 <li>
-                    <%}%>
                     <a href="windows.php"><i class="glyphicon glyphicon-plus"></i>挂号窗口</a>
                 </li>
-                <%if(doctor.getPosition().equals("1")){%>
+                <%} else if(doctor.getPosition().equals("1")){%>
                 <li class="active-link">
-                        <%} else {%>
                 <li>
-                    <%}%>
                     <a href="diagnose.php"><i class="glyphicon glyphicon-user"></i>诊断窗口</a>
                 </li>
+                <%} else if(doctor.getPosition().equals("2")){%>
                 <%--/收款窗口是指收取药品费用的窗口--%>
-                <%if(doctor.getPosition().equals("2")){%>
                 <li class="active-link">
-                        <%} else {%>
                 <li>
-                    <%}%>
                     <a href="collection.php"><i class="glyphicon glyphicon-search"></i>收款窗口</a>
                 </li>
+                <%}%>
                 <li>
                     <a href="logout.php"><i class="fa fa-home"></i>注销登录</a>
                 </li>
